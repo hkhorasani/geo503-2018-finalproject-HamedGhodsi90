@@ -9,7 +9,7 @@ output: html_document
 # Inroduction
 
 This project provides documentation for the analysis of an anonymous city sewer collection system. The purpose of this report is to provide the interpretation of **SWMM** output files.  
-EPA's Stormwater Management Model (SWMM) is used for single event or long-term simulations of water runoff quantity and quality in primarily urban areas–although there are also many applications that can be used for drainage systems in non-urban areas. It is used throughout the world for planning, analysis, and design related to stormwater runoff, combined and sanitary sewers, and other drainage systems.  
+EPA's Stormwater Management Model (SWMM) is used for single event or long-term simulations of water runoff quantity and quality in primarily urban areas–although  there are also many applications that can be used for drainage systems in non-urban areas. It is used throughout the world for planning, analysis, and design related to stormwater runoff, combined and sanitary sewers, and other drainage systems.  
 The SWMM output would be made in two files. The first one is a report file (*".rpt"*) which includes all the cumulative results from the simulation model such as runoff and outfall loading summary. The second one is a binary file (*".out"*) which include the time series analysis of different elements of the model like subcatchments, nodes and links. Usually researchers use SWMM software interface to analyze the time series result, which is stored in the binary file. However, in this report the analysis would be done using `R`. As a result, the simulation model results would be analyzed and showed in two separated parts. It should be noted that to get the output files, the input file was run manually through the SWMM model interface.
 
 ***  
@@ -50,7 +50,7 @@ tt3 <- ttheme_minimal(
 
 ```
 
-With the following lines of `R` code, the input file could be readable. The first line, would download the data set from [github](https://raw.githubusercontent.com/AdamWilsonLabEDU/geo503-2018-finalproject-HamedGhodsi90/master/data/SWMMReportFile.rpt). I made this line as a comment. Because just for the first time it is needed to be downloaded. The rest of the time, the file is in the current folder and can be read easily. Therefore, it is not needed to download it again. For the users who want to run this model for the first time, they should run this line (remove the #) 
+With the following lines of `R` code, the input file could be readable. The first line, would download the data set from [github](https://raw.githubusercontent.com/AdamWilsonLabEDU/geo503-2018-finalproject-HamedGhodsi90/master/data/SWMMReportFile.rpt). I made this line as a comment. Because just for the first time it is needed to be downloaded . The rest of the time, the file is in the current folder and can be read easily. Therefore, it is not needed to download it again. For the users who want to run this model for the first time, they should run this line (remove the #) 
 
 ```{r error=FALSE, message=FALSE, warning=FALSE}
 
@@ -217,7 +217,7 @@ grid.table(rpt_sub_Dep_Area_top, theme=tt3)
 grid.table(rpt_sub_Area_Vol_top, theme=tt3)
 ```
 
-Knowing the subcatchments with the high value of total runoff and total depth would help the managers to understand the watershed in a better way. For example in order to decrease the runoff volume, low impact developments (**LID**) could be utilized. TO implement the LIDs, these selected subcatchments could have more priority.  
+Knowing the subcatchments with the high value of total runoff and total depth would help the managers to understand the watershed in a better way. For example in order to decrease the runoff volume, low impact developments (**LID**) could be utilized. TO  implement the LIDs, these selected subcatchments could have more priority.  
 ``` {r echo=FALSE}
 
 # 3.4: Upstream subcatchments ..........................................................
@@ -322,7 +322,7 @@ rpt_sub_subname_num_to <- cbind(rpt_sub_subname, rpt_sub_subname_num)
 
 ***
 
-# Conclusions
+# Conclusions 
 
 
 
